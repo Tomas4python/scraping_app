@@ -1,6 +1,9 @@
 # The app is created with the goal of learning python coding.
 
-# App for scraping top Lithuanian web-stores for gaming computer and their prices by Tomas Suslavicius
+import sys
+print(sys.path)
+
+# App for scraping top Lithuanian web-stores for gaming computer and their prices by Tomas Suslavicius.
 
 # Import necessary libraries
 import tkinter as tk
@@ -83,18 +86,18 @@ class Buttons(ttk.LabelFrame):
         self.grid(row=1, column=1, sticky = 'nw')
 
         # Create checkbutton for search filter of results
-        self.checkbutton_var = tk.BooleanVar(value=True)
+        self.checkbutton_var = tk.BooleanVar(value=False)
         checkbutton = ttk.Checkbutton(self, variable=self.checkbutton_var, offvalue=False, onvalue=True, text="Filter search by 1800-2400€", )
         checkbutton.pack(expand = True, fill = 'both', pady = 10)
 
         # Name buttons and store search strings in a dictionary
         dict_of_buttons = {
-                    'HP 32 GB RTX 3070 Ti': 'hp 32 gb rtx 3070 ti',
-                    'LENOVO 32 GB RTX 3070 Ti': 'lenovo 32 gb rtx 3070 ti',
                     'HP i7 32 GB RTX 3070 Ti': 'hp i7 32 gb rtx 3070 ti',
                     'LENOVO i7 32 GB RTX 3070 Ti': 'legion i7 32 gb rtx 3070 ti',
-                    'DELL 32 GB RTX 3070 Ti': 'dell 32 gb rtx 3070 ti',
-                    '32 GB RTX 3070 ti': '32 gb rtx 3070 ti',
+                    'HP 32 GB RTX 4060': 'hp 32 gb rtx 4060',
+                    'LENOVO 32 GB RTX 4060': 'legion 32 gb rtx 4060',
+                    'HP i7 32 GB RTX 4070': 'HP i7 32 gb rtx 4070',
+                    'LENOVO i9 32 GB RTX 4070': 'legion i9 32 gb rtx 4070',
                     }
         
         # Create and store buttons in a dictionary for multiple actions (enable/disable)
